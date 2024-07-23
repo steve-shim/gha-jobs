@@ -1,8 +1,15 @@
 name: Our Jobs
 on: push
 jobs:
-  hello1:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, GitHub Actions!" > hello.txt
-      - run: cat hello.txt
+      - run: echo ${{ github.job }}
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
