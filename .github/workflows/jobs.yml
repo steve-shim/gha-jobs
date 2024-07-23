@@ -4,7 +4,7 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello!""
+      - run: echo 'Hello!'
   echo_if:
     runs-on: ubuntu-latest
     if: github.ref_name == 'feature'
