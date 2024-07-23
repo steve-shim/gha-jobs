@@ -1,17 +1,11 @@
 name: Our Jobs
 on: push
 jobs:
-  echo:
+  todos:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello!'
-  echo_if:
-    runs-on: ubuntu-latest
-    if: github.ref_name == 'main'
-    steps:
-      - run: echo 'Hello, main!'
-  job3:
-    runs-on: ubuntu-latest
-    if: contains(github.event.head_commit.message, 'skip ci')
-    steps:
-      - run: echo 'Hello, Skip CI'
+      - run: |
+          echo "## 할일 목록" >> $GITHUB_STEP_SUMMARY
+          echo "- 자기" >> $GITHUB_STEP_SUMMARY
+          echo "- 놀기" >> $GITHUB_STEP_SUMMARY
+          echo "- 먹기" >> $GITHUB_STEP_SUMMARY
