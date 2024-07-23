@@ -7,9 +7,9 @@ jobs:
       - run: echo 'Hello!'
   echo_if:
     runs-on: ubuntu-latest
-    if: github.ref_name == 'feature'
+    if: github.ref_name == 'main'
     steps:
-      - run: echo 'Hello, Freture!'
+      - run: echo 'Hello, main!'
   job3:
     runs-on: ubuntu-latest
     if: contains(github.event.head_commit.message, 'skip ci')
